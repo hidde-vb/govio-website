@@ -13,24 +13,26 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+      <>
+        <Helmet title={siteTitle}></Helmet>
+        <Hero data={author.node} />
+        <Layout location={this.props.location}>
+          <div style={{ background: '#fff' }}>
+            <div className="wrapper">
+              <h2 className="section-headline">Recent articles</h2>
+              <ul className="article-list">
+                {posts.map(({ node }) => {
+                  return (
+                    <li key={node.slug}>
+                      <ArticlePreview article={node} />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </>
     )
   }
 }
@@ -71,10 +73,8 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
+              maxWidth: 600
+              background: "rgb:fff"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
             }

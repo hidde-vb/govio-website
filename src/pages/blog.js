@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import styles from './blog.module.css'
-import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
 class BlogIndex extends React.Component {
@@ -12,7 +11,7 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
-      <Layout location={this.props.location}>
+      <>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <div className={styles.hero}>Blog</div>
@@ -29,7 +28,7 @@ class BlogIndex extends React.Component {
             </ul>
           </div>
         </div>
-      </Layout>
+      </>
     )
   }
 }
