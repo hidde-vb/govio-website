@@ -1,8 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
 import get from 'lodash/get'
+
 import Layout from '../components/layout'
+
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,7 +17,7 @@ class BlogPostTemplate extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div >
-            <p>hero dummy</p>
+            <Img fluid={post.heroImage.fluid} style={{ position: "relative", "max-height": "50vh" }}  />
           </div>
           <div className="wrapper">
             <h1 className="section-headline">{post.title}</h1>

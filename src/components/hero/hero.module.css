@@ -19,7 +19,7 @@
   width: 94%;
   left: 3%;
 
-  z-index: 100;
+  z-index: 5;
 
   mix-blend-mode: difference;
   transition: 300ms;
@@ -50,5 +50,4 @@
       height: 100%;
       padding: 0;
   }
-
 }

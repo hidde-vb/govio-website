@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
+import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
@@ -10,16 +11,21 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const [config] = get(this, 'props.data.allContentfulConfig.edges')
 
     return (
       <>
         <Helmet title={siteTitle}></Helmet>
-        <Hero data={author.node} />
+        <Navigation />
+        <Hero image={config.node} />
         <Layout location={this.props.location}>
-          <div style={{ background: '#fff' }}>
+          <div className="container">
             <div className="wrapper">
-              <h2 className="section-headline">Recent articles</h2>
+              <h1>Jeugdhuis Govio</h1>
+              <p>Jeugdhuis Govio is in de eerste plaats een ontmoetingsplek voor jongeren. Vanaf het jaar dat je 16 wordt, kan je in het café binnenspringen voor een babbeltje of om iets te drinken. Wat je ook gelooft of hoe je er ook uitziet, iedereen is welkom. Het zijn de jongeren zelf die het jeugdhuis draaiende houden. Het zijn zij die bepalen wat er gebeurt. Iedereen die wil, kan meehelpen in het jeugdhuis.</p>
+            </div>
+            <div className="wrapper">
+              <h2 className="section-headline">Updates</h2>
               <ul className="article-list">
                 {posts.map(({ node }) => {
                   return (
@@ -41,6 +47,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
@@ -61,17 +68,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
+    allContentfulConfig(
+      filter: { contentful_id: { eq: "6bt9soDWHg9WqCOuopsHTs" } }
     ) {
       edges {
         node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
+          heroImage {
             fluid(
               maxWidth: 600
               background: "rgb:fff"

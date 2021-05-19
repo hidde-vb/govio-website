@@ -9,6 +9,9 @@ class Template extends React.Component {
     return (
       <Container>
         {children}
+        <div style={{backgroundColor: "black", height: 400}}>
+
+        </div>
       </Container>
     )
   }

@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styles from './hero.module.css'
 import Govio from '../../images/govio-white.svg'
 
-export default ({ data }) => {
+export default ({ image }) => {
   const [offset, setOffset] = useState('30vh');
 
   useLayoutEffect(() => {
@@ -25,7 +25,7 @@ export default ({ data }) => {
         <object className={styles.heroTitle} type="image/svg+xml" data={Govio} style={{ top: offset }}>
           Govio
           </object>
-        <Img className={styles.heroImage} fluid={data.heroImage.fluid} style={{ position: "relative" }} />
+        <Img className={styles.heroImage} fluid={image.heroImage.fluid} style={{ position: "relative" }} />
       </div>
     </div>
   )

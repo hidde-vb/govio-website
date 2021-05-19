@@ -10,7 +10,7 @@ body {
   font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
+  color: black;
   background: #eee;
   margin: 0;
 }
@@ -20,7 +20,10 @@ img {
   width: 100%;
 }
 
-h1,
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
 h2,
 h3 {
   font-size: 2em;
@@ -31,10 +34,18 @@ a {
   color: currentColor;
 }
 
+.container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
 .wrapper {
-  width: calc(100% - 10vmin);
+  max-width: 512px;
+  min-width: 400px;
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 20px;
 }
 
 /**
@@ -44,8 +55,8 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
   grid-gap: 5vmin;
 }
 
