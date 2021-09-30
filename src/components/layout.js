@@ -1,20 +1,22 @@
 import React from 'react'
 import './base.css'
+import { Helmet } from 'react-helmet'
 import Container from './container'
+import Navigation from './navigation'
 
-class Template extends React.Component {
-  render() {
-    const { children } = this.props
+function Layout({ children, siteTitle }) {
 
-    return (
-      <Container>
-        {children}
-        <div style={{backgroundColor: "black", height: 400}}>
+  return (
+    <Container>
+      <Helmet title={siteTitle}></Helmet>
+      <Navigation />
+      {children}
+      <div style={{ backgroundColor: "black", height: 400 }}>
+      {/* Footer */}
+      </div>
+    </Container>
+  )
 
-        </div>
-      </Container>
-    )
-  }
 }
 
-export default Template
+export default Layout

@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
-import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
@@ -13,9 +11,7 @@ class RootIndex extends React.Component {
 
     return (
       <>
-        <Helmet title={siteTitle}></Helmet>
-        <Navigation />
-        <Layout location={this.props.location}>
+        <Layout location={this.props.location} title={siteTitle}>
           <div className="container">
             <div className="wrapper">
               <h1>Jeugdhuis Govio</h1>
@@ -44,14 +40,12 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
           slug
           publishDate(formatString: "MMMM Do, YYYY")
-          tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG

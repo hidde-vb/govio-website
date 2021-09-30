@@ -22,6 +22,14 @@
   font-display: swap;
 }
 
+:root {
+  --c-navy: #000080;
+  --c-background: #fff;
+  --c-main: #222;
+
+  --gutter: 16px;
+}
+
 body {
   font-family: "Monsterrat", Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;

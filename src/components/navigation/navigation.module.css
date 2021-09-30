@@ -1,40 +1,52 @@
+@import url(../base.css);
+
 .navigation {
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 0;
-  margin: 0;
   top: 0;
-  height: 20vh;
-  max-height: 60px;
+  border-bottom: var(--c-navy) 3px solid;
+
   width: 100%;
-  font-size: 1.25em;
-  color: black;
+
+  background-color: var(--c-background);
   z-index: 10;
 }
 
-.navigationBar {
-  padding-top: 20px;
-  height: 100px;
-}
-
 .menu {
-  display: none;
+  color: var(--c-main);
+  display: block;
+  list-style: none;
 }
 
 .menuItem {
-  padding: 0 40px;
+  display: inline;
+  padding: 0 16px;
 }
 
 .menuLink {
+  font-family: "SpaceGrotesk", Tahoma, Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
+.menuIcon {
+  display: inline;
+  margin-top: 12px;
+  width: 28px;
+  height: 28px;
+  transition: all .1s linear;
+}
+
+.menuIcon:hover {
+  transform: scale(1.2);
+} 
+
 .logo {
-  position: absolute;
-  width: 45px;
-  margin-left: 30px;
-  transition: .3s;
+  margin: 0 auto;
 }
 
 /* Hamburger */
@@ -42,7 +54,6 @@
 .hamburger {
   width: 45px;
   float: right;
-  margin-top: 10px;
   margin-right: 30px;
 }
 
