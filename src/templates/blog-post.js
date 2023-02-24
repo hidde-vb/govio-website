@@ -23,20 +23,15 @@ class BlogPostTemplate extends React.Component {
     )
     const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
     const { minutes: timeToRead } = readingTime(plainTextBody)
-    
+
     const options = {
       renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        const { gatsbyImage, description } = node.data.target
-        return (
-           <GatsbyImage
-              image={getImage(gatsbyImage)}
-              alt={description}
-           />
-         )
+          const { gatsbyImage, description } = node.data.target
+          return <GatsbyImage image={getImage(gatsbyImage)} alt={description} />
         },
       },
-    };
+    }
 
     return (
       <Layout location={this.props.location}>
@@ -99,9 +94,9 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
-      author {
-        name
-      }
+      description
+      author
+      body
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
@@ -109,14 +104,6 @@ export const pageQuery = graphql`
         resize(height: 630, width: 1200) {
           src
         }
-      }
-      body {
-        raw
-        
-      }
-      tags
-      description {
-        raw
       }
     }
     previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {

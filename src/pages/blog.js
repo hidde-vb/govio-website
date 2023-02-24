@@ -30,7 +30,6 @@ export const pageQuery = graphql`
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
-        tags
         heroImage {
           gatsbyImage(
             layout: FULL_WIDTH
@@ -39,9 +38,7 @@ export const pageQuery = graphql`
             height: 212
           )
         }
-        description {
-          raw
-        }
+        description
       }
     }
   }

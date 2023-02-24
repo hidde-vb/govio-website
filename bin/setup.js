@@ -7,6 +7,8 @@ const { writeFileSync } = require("fs");
 
 const argv = require("yargs-parser")(process.argv.slice(2));
 
+// TODO clean this up, gets run in the postinstall
+
 console.log(`
   To set up this project you need to provide your Space ID
   and the belonging API access tokens. Please use an empty space for this.
