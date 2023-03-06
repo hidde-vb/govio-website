@@ -30,7 +30,7 @@
 
 .article a:hover {
   border-bottom-color: transparent;
-  color: var(--primary);
+  color: var(--peirs);
 }
 
 .article p {
@@ -89,7 +89,7 @@
   .article ul {
     padding-left: 5px;
   }
-  
+
   .article ol {
     padding-left: 5px;
   }

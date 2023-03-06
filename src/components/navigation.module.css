@@ -27,8 +27,8 @@
 }
 
 .navigationItem a:hover {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
+  border-bottom-color: var(--peirs);
+  color: var(--peirs);
 }
 
 .logoLink {

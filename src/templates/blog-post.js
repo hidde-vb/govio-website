@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import readingTime from 'reading-time'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
@@ -18,43 +13,20 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-    const plainTextDescription = documentToPlainTextString(
-      JSON.parse(post.description.raw)
-    )
-    const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
-    const { minutes: timeToRead } = readingTime(plainTextBody)
-
-    const options = {
-      renderNode: {
-        [BLOCKS.EMBEDDED_ASSET]: (node) => {
-          const { gatsbyImage, description } = node.data.target
-          return <GatsbyImage image={getImage(gatsbyImage)} alt={description} />
-        },
-      },
-    }
 
     return (
       <Layout location={this.props.location}>
-        <Seo
-          title={post.title}
-          description={plainTextDescription}
-          image={`http:${post.heroImage.resize.src}`}
-        />
-        <Hero
-          image={post.heroImage?.gatsbyImage}
-          title={post.title}
-          content={post.description}
-        />
+        <Seo title={post.title} image={`http:${post.heroImage.resize.src}`} />
+        <Hero image={post.heroImage?.gatsbyImage} title={post.title} />
         <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {timeToRead} minute read
-          </span>
+          <span className={styles.meta}>{post.author?.name} &middot; </span>
           <div className={styles.article}>
-            <div className={styles.body}>
-              {post.body?.raw && renderRichText(post.body, options)}
-            </div>
+            <div
+              className={styles.body}
+              dangerouslySetInnerHTML={{
+                __html: post.body.childMarkdownRemark.html,
+              }}
+            ></div>
             <Tags tags={post.tags} />
             {(previous || next) && (
               <nav>
@@ -98,7 +70,9 @@ export const pageQuery = graphql`
         name
       }
       body {
-        body
+        childMarkdownRemark {
+          html
+        }
       }
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate

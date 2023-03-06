@@ -20,7 +20,7 @@
 }
 
 .link:hover .title {
-  border-bottom-color: var(--primary);
+  border-bottom-color: var(--peirs);
 }
 
 .meta {
