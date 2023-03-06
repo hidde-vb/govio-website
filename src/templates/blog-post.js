@@ -94,12 +94,11 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
-      author
-      body {
-        raw
+      author {
+        name
       }
-      description {
-        raw
+      body {
+        body
       }
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
