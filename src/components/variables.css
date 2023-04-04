@@ -37,16 +37,13 @@
   --heavy: 900;
 
   /* font-size */
-  --text-xs: 12px;
   --text-sm: 14px;
-  --text-md: 16px;
   --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 32px;
-  --text-4xl: 48px;
-  --text-5xl: 64px;
-  --text-6xl: 76px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+  --text-5xl: 76px;
 
   /* tokens */
   /* colors */
@@ -71,7 +68,7 @@
 
   /* size */
   --size-gutter: var(--space-2xl);
-  --size-logo: var(--space-2xl);
+  --size-logo: 8rem;
   --size-max-width: 80rem;
 }
 

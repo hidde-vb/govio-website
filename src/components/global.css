@@ -66,10 +66,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--peirs);
-}
-
 a.active {
   font-weight: var(--bold);
 }
@@ -112,4 +108,10 @@ code {
 
 .display {
   font-family: var(--font-heading);
+}
+
+/* Stop scroll when overlay is opened */
+.overlayOpen {
+  height: 100vh;
+  overflow-y: hidden;
 }

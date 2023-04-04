@@ -16,18 +16,16 @@ const ArticlePreview = ({ posts }) => {
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
-            <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
-                <GatsbyImage alt="" image={post.heroImage.gatsbyImage} />
-                <h2 className={styles.title}>{post.title}</h2>
+            <li key={post.slug} className={styles.articlePreview}>
+              <Link to={`/blog/${post.slug}`}>
+                <div>
+                  <GatsbyImage className={styles.image} alt={styles.title} image={post.heroImage.gatsbyImage} />
+                  <div className={styles.caption}>
+                    <h2 className={styles.title}>{post.title}</h2>
+                    <p className={styles.subtitle}>{post.publishDate}</p>
+                  </div>
+                </div>
               </Link>
-              <div>
-                {post.description?.raw && renderRichText(post.description)}
-              </div>
-              <div className={styles.meta}>
-                <small className="meta">{post.publishDate}</small>
-                <Tags tags={post.tags} />
-              </div>
             </li>
           )
         })}

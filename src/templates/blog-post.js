@@ -10,7 +10,7 @@ import * as styles from './blog-post.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulEvent')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
 
@@ -63,7 +63,7 @@ export const pageQuery = graphql`
     $previousPostSlug: String
     $nextPostSlug: String
   ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulEvent(slug: { eq: $slug }) {
       slug
       title
       author {
@@ -83,11 +83,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
+    previous: contentfulEvent(slug: { eq: $previousPostSlug }) {
       slug
       title
     }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
+    next: contentfulEvent(slug: { eq: $nextPostSlug }) {
       slug
       title
     }
