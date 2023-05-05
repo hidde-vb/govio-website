@@ -12,6 +12,8 @@
 }
 
 .container a:hover {
-  border-bottom-color: var(--peirs);
-  color: var(--peirs);
+  border-bottom-color: var(--roos);
+  color: var(--roos);
 }
+
+

@@ -96,7 +96,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
-          <Link to="/3/" activeClassName="active">
+          <Link to="/team/" activeClassName="active">
             team
           </Link>
         </li>

@@ -1,0 +1,27 @@
+.personList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: var(--space-xl);
+}
+
+.personPreview {
+  display: block;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-md);
+}
+
+.caption {
+  position: absolute;
+  padding: var(--space-md) var(--space-xl);
+  background-color: var(--white);
+  bottom: 0;
+  left: 0;
+}

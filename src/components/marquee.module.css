@@ -1,0 +1,41 @@
+.marquee {
+    display: flex;
+    overflow: hidden;
+    max-width: var(--size-max-width);
+    margin: 2rem auto;
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl);
+    
+    border-top: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+}
+
+.marqueeScroll {
+  display: border-box;
+  font-family: var(--font-header);
+  
+  transform: translateY(-12px);
+
+  animation: marquee 25s linear infinite;
+  animation-play-state: paused;
+}
+
+@media (min-width: 480px) {
+  .marquee {
+    font-size: var(--text-xxl);
+    line-height: var(--text-xxl);
+  }
+}
+
+.marquee:hover .marqueeScroll {
+  animation-play-state: running;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0, 0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
