@@ -10,16 +10,16 @@ import PersonList from '../components/person-list'
 const TeamIndex = (props) => {
   const people = get(props, 'data.allContentfulPerson.nodes')
 
-  const BKs = people.filter((people) => (people.title = 'BK'))
-
-  console.log(BKs)
+  const BKs = people.filter((people) => (people.title === 'BK'))
+  const Bestuur = people.filter((people) => (people.title === 'Bestuur'))
 
   return (
     <Layout location={props.location}>
       <Seo title="Team" />
-      <Marquee content="Medewerkers" />
-
       <Marquee content="BestuurBestuur" />
+      <PersonList persons={Bestuur} />
+
+      <Marquee content="Beroepskrachten" />
       <PersonList persons={BKs} />
     </Layout>
   )

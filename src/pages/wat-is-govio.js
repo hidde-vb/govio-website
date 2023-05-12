@@ -2,26 +2,27 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
+import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
-class RootIndex extends React.Component {
-  render() {
-    const posts = get(this, 'props.data.allContentfulEvent.nodes')
+const WatIsGovioIndex = (props) => {
+  return (
+    <Layout location={props.location}>
+      <Seo title="Wat is Govio" />
+      
+      <Hero title="Govio" />
 
-    return (
-      <Layout location={this.props.location}>
-        <ArticlePreview posts={posts} />
-      </Layout>
-    )
-  }
+      {/* Somethin about Bar Goof */}
+    </Layout>
+  )
 }
 
-export default RootIndex
+export default WatIsGovioIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query BlogIndexQuery {
     allContentfulEvent(sort: { publishDate: DESC }) {
       nodes {
         title
@@ -32,7 +33,7 @@ export const pageQuery = graphql`
             layout: FULL_WIDTH
             placeholder: BLURRED
             width: 424
-            height: 318
+            height: 212
           )
         }
       }

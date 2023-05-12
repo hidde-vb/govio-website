@@ -7,21 +7,23 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
-class BlogIndex extends React.Component {
-  render() {
-    const posts = get(this, 'props.data.allContentfulEvent.nodes')
+const WatIsGovioIndex = (props) => {
+  return (
+    <Layout location={props.location}>
+      <Seo title="Uitlenen" />
+      <Hero title="uitlenen" />
 
-    return (
-      <Layout location={this.props.location}>
-        <Seo title="Blog" />
-        <Hero title="Blog" />
-        <ArticlePreview posts={posts} />
-      </Layout>
-    )
-  }
+      <p>
+        Gemeente Kalmthout stelt een volledige licht- en geluidsinstallatie ter
+        beschikking voor alle Kalmthoutse verenigingen. Je kan de installatie
+        volledig gratis gebruiken (zelf ophalen en terugbrengen). Jeugdhuis
+        Govio beheert deze installatie
+      </p>
+    </Layout>
+  )
 }
 
-export default BlogIndex
+export default WatIsGovioIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {

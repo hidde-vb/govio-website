@@ -36,19 +36,35 @@ const Navigation = () => {
             <img className={styles.logo} alt="Logo" src={inverseLogo} />
           </Link>
           <ul className={styles.menu}>
+
             <li className={styles.menuItem}>
-              <Link to="/" activeClassName="active">
-                Home
+              <Link to="/agenda" activeClassName="active">
+                Agenda
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/1" activeClassName="active">
-                Andere
+              <Link to="/wat-is-govio" activeClassName="active">
+                Wat is Govio
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/2" activeClassName="active">
-                Placeholder
+              <Link to="/team/" activeClassName="active">
+                Team
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link to="/blog/" activeClassName="active">
+                Organiseren
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link to="/projecten/" activeClassName="active">
+                Projecten
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link to="/uitlenen/" activeClassName="active">
+                Uitlenen
               </Link>
             </li>
           </ul>
@@ -71,18 +87,18 @@ const Navigation = () => {
       {/* Navigation Bar */}
       <ul className={styles.navigationBar}>
         <li className={styles.navigationBarItem}>
-          <Link to="/" activeClassName="active">
-            Home
+          <Link to="/agenda" activeClassName="active">
+            Agenda
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
-          <Link to="/1" activeClassName="active">
-            Andere
+          <Link to="/wat-is-govio" activeClassName="active">
+            Wat is Govio
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
-          <Link to="/2" activeClassName="active">
-            Placeholder
+          <Link to="/team/" activeClassName="active">
+            Team
           </Link>
         </li>
         <li>
@@ -92,17 +108,17 @@ const Navigation = () => {
         </li>
         <li className={styles.navigationBarItem}>
           <Link to="/blog/" activeClassName="active">
-            Blog
+            Organiseren
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
-          <Link to="/team/" activeClassName="active">
-            team
+          <Link to="/projecten/" activeClassName="active">
+            Projecten
           </Link>
         </li>
-        <li className={styles.navigationBarItem}>
-          <Link to="/4/" activeClassName="active">
-            en meer
+        <li className={`${styles.navigationBarItem} ${styles.button}`}>
+          <Link to="/uitlenen/" activeClassName="active">
+            Uitlenen
           </Link>
         </li>
       </ul>

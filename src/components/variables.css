@@ -63,7 +63,7 @@
   /* size */
   --text-lead: var(--text-lg);
   --text-prose: var(--text-md);
-  --text-title: var(--text-3xl);
+  --text-title: var(--text-5xl);
   /* tracking */
   --text-prose-tracking: -0.011em;
 
@@ -82,7 +82,7 @@
 @media (min-width: 768px) {
   :root {
     --text-lead: var(--text-2xl);
-    --text-title: var(--text-4xl);
+    --text-title: var(--text-xxl);
     --text-prose-tracking: -0.014em;
     --text-prose: var(--text-lg);
   }

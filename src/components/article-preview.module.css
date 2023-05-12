@@ -3,8 +3,8 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: var(--space-sm);
 }
 
 .title,
@@ -50,3 +50,13 @@
 .link {
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  
+  .articlePreview {
+    margin: 0;
+    grid-template-columns: repeat(100px);
+  }
+}
+
+
