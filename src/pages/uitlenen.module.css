@@ -1,0 +1,42 @@
+.button {
+  background-color: var(--gruun);
+  display: inline-block;
+  padding: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Maybe a fun image? */
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: var(--space-md) auto;
+  padding: var(--space-md);
+  border: 1rem solid var(--rouge);
+  max-width: 16rem;
+  height: 16rem;
+
+  font-size: var(--text-xl);
+  font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.block__1 {
+  border-color: var(--geil);
+}
+
+.block__2 {
+  border-color: var(--turkwaas);
+}

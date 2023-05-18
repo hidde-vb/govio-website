@@ -136,6 +136,6 @@
 }
 .button a {
   transform: skew(-20deg) scale(0.8);
-  color: var(--black) !important;
+  color: var(--gruun-soft) !important;
   border-bottom: 0 !important;
 }

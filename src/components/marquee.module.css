@@ -16,8 +16,8 @@
   
   transform: translateY(-12px);
 
-  animation: marquee 25s linear infinite;
-  animation-play-state: paused;
+  animation: marquee 40s linear infinite;
+  animation-play-state: running;
 }
 
 @media (min-width: 480px) {
@@ -28,7 +28,7 @@
 }
 
 .marquee:hover .marqueeScroll {
-  animation-play-state: running;
+  animation-play-state: paused;
 }
 
 @keyframes marquee {

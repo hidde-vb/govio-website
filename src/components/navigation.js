@@ -117,7 +117,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={`${styles.navigationBarItem} ${styles.button}`}>
-          <Link to="/uitlenen/" activeClassName="active">
+          <Link to="/uitlenen/">
             Uitlenen
           </Link>
         </li>
