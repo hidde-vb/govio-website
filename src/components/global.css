@@ -150,3 +150,16 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+.button {
+  background-color: var(--gruun);
+  display: inline-block;
+  padding: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+

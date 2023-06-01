@@ -22,7 +22,7 @@ const WatIsGovioIndex = (props) => {
             target="_blank"
             href="https://docs.google.com/forms/d/e/1FAIpQLSc-Lf47rTm5NYSVbp7UvuJSqjnjaFI8ZnvJze-ACV1kd9e9Iw/viewform"
           >
-            <div className={styles.button}>Aanvraag indienen</div>
+            <div className="button">Aanvraag indienen</div>
           </a>
         </div>
         <div>

@@ -3,8 +3,7 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+  const Post = path.resolve('./src/templates/blog-post.js')
 
   const result = await graphql(
     `
@@ -29,10 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allContentfulEvent.nodes
 
-  // Create blog posts pages
-  // But only if there's at least one blog post found in Contentful
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
+  // Create posts pages
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostSlug = index === 0 ? null : posts[index - 1].slug
@@ -41,7 +37,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/blog/${post.slug}/`,
-        component: blogPost,
+        component: Post,
         context: {
           slug: post.slug,
           previousPostSlug,
@@ -50,4 +46,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+}
+
+exports.createSchemaCustomization = ({ actions, schema, getNode }) => {
+  actions.createTypes([
+    schema.buildObjectType({
+      name: 'ContentfulEvent',
+      interfaces: ['Node'],
+      fields: {
+        isFuture: {
+          type: 'Boolean!',
+          resolve: (source) => new Date(source.publishDate) > new Date(),
+        },
+      },
+    }),
+  ])
 }

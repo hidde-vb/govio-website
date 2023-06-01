@@ -1,10 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
+import EventPreview from '../components/event-preview'
+import Container from '../components/container'
+import Seo from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
@@ -12,7 +14,17 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <ArticlePreview posts={posts} />
+        <Seo title="Home" />
+        
+        <EventPreview posts={posts} />
+
+        <Container>
+          <Link to="/agenda" activeClassName="active">
+            <div role="button" className="button">
+              Bekijk alle events
+            </div>
+          </Link>
+        </Container>
       </Layout>
     )
   }
@@ -21,21 +33,24 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulEvent(sort: { publishDate: DESC }) {
-      nodes {
-        title
-        slug
-        publishDate(formatString: "MMMM Do, YYYY")
-        heroImage {
-          gatsbyImage(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 318
-          )
-        }
+query HomeQuery {
+  allContentfulEvent(
+      sort: { publishDate: ASC }, 
+      limit: 6,
+      filter: { isFuture: { eq: true } }) {
+    nodes {
+      title
+      slug
+      publishDate(formatString: "MMMM Do, YYYY")
+      heroImage {
+        gatsbyImage(
+          layout: FULL_WIDTH
+          placeholder: DOMINANT_COLOR
+          width: 424
+          height: 318
+        )
       }
     }
   }
+}
 `

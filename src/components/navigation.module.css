@@ -1,7 +1,9 @@
+nav {
+  padding-bottom: var(--space-2xl);
+}
+
 .logo {
-  position: relative;
   width: 12rem;
-  top: -1rem;
   margin: 0 auto;
 }
 
@@ -96,15 +98,6 @@
 
 .navigationBarLogo {
   width: 14rem;
-  position: relative;
-  top: -1.5rem;
-}
-
-@media (min-width: 480px) {
-  .logo {
-    width: 16rem;
-    top: -1.5rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {

@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { Link } from 'gatsby'
 
 import * as styles from './navigation.module.css'
-import logo from '../../static/images/logo-black.png'
-import inverseLogo from '../../static/images/logo-white.png'
+import logoBlack from '../../static/images/logo-black.png'
+import logoWhite from '../../static/images/logo-white.png'
 
 const Navigation = () => {
   const [open, setOpen] = useState(false)
@@ -25,7 +25,7 @@ const Navigation = () => {
   return (
     <nav role="navigation" aria-label="Main">
       <Link to="/">
-        <img className={styles.logo} alt="Logo" src={logo} />
+        <img className={styles.logo} alt="Logo" src={logoBlack} />
       </Link>
 
       {/* overlay Menu */}
@@ -33,7 +33,7 @@ const Navigation = () => {
       {open && (
         <div className={styles.overlay}>
           <Link to="/">
-            <img className={styles.logo} alt="Logo" src={inverseLogo} />
+            <img className={styles.logo} alt="Logo" src={logoWhite} />
           </Link>
           <ul className={styles.menu}>
 
@@ -103,7 +103,7 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/">
-            <img className={styles.navigationBarLogo} alt="Logo" src={logo} />
+            <img className={styles.navigationBarLogo} alt="Logo" src={logoBlack} />
           </Link>
         </li>
         <li className={styles.navigationBarItem}>

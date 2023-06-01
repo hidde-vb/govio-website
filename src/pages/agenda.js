@@ -1,11 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
+import EventPreview from '../components/event-preview'
+import Container from '../components/container'
 
 class AgendaIndex extends React.Component {
   render() {
@@ -15,7 +16,16 @@ class AgendaIndex extends React.Component {
       <Layout location={this.props.location}>
         <Seo title="Agenda" />
         <Hero title="Agenda" />
-        <ArticlePreview posts={posts} />
+
+        <Container>
+          <Link to="/archief" activeClassName="active">
+            <div role="button" className="button">
+              Bekijk archief
+            </div>
+          </Link>
+        </Container>
+
+        <EventPreview posts={posts} />
       </Layout>
     )
   }
@@ -25,7 +35,11 @@ export default AgendaIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allContentfulEvent(sort: { publishDate: DESC }) {
+    allContentfulEvent(
+      sort: { publishDate: ASC }
+      limit: 15
+      filter: { isFuture: { eq: true } }
+    ) {
       nodes {
         title
         slug
@@ -33,9 +47,9 @@ export const pageQuery = graphql`
         heroImage {
           gatsbyImage(
             layout: FULL_WIDTH
-            placeholder: BLURRED
+            placeholder: DOMINANT_COLOR
             width: 424
-            height: 212
+            height: 318
           )
         }
       }
