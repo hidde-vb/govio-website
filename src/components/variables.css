@@ -62,7 +62,7 @@
   --text-color: var(--black);
   /* size */
   --text-lead: var(--text-lg);
-  --text-prose: var(--text-md);
+  --text-prose: var(--text-lg);
   --text-title: var(--text-3xl);
   /* tracking */
   --text-prose-tracking: -0.011em;

@@ -1,19 +1,81 @@
-.container {
-  border-top: 1px solid var(--border);
-  font-size: var(--text-sm);
-  margin-top: var(--space-2xl);
-  padding: var(--space-2xl) 0;
-  text-align: right;
+.footer {
+  display: flex;
+  padding-top: var(--size-gutter);
+  color: var(--white);
+  background-color: var(--black);
+  
 }
 
-.container a {
-  border-bottom: 1.5px solid transparent;
+
+.textContainer {
+  font-size: var(--text-sm);
+  width: 100%;
+  max-width: var(--size-max-width);
+  margin: 0 auto;
+  padding: 0 var(--size-gutter) var(--size-gutter) var(--size-gutter);
+  
+}
+
+.columnsContainer {
+  display: flex;
+  font-size: var(--text-lg);
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: var(--size-gutter);
+  
+}
+
+.column {
+  padding-right: 4rem;
+}
+
+
+.list {
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--bold);
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.glyph {
+  display: inline;
+  width: 32px;
+  height: 32px;
+  margin: 12px 10px 0 10px;
+}
+
+
+.link {
+  border-bottom: 1.5px solid white;
   font-weight: var(--medium);
 }
 
-.container a:hover {
-  border-bottom-color: var(--roos);
-  color: var(--roos);
+.link:hover {
+  border-bottom-color: var(--gruun);
+  color: var(--gruun);
 }
 
+.wave {
+  display: none;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
 
+@media (min-width: 1024px) {
+  .wave {
+    display: block;
+    width: 24rem;
+    height: 24rem;
+  }
+}

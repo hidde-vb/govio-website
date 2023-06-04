@@ -69,7 +69,9 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="icon" href="../../static/images/favicon.png" />
+    </Helmet>
   )
 }
 
