@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as styles from './marquee.module.css'
 
-const marquee = ({ content = '' }) => {
+const Marquee = ({ content = '' }) => {
   return (
     <div className={styles.marquee}>
       <div className={styles.marqueeScroll}>
@@ -23,4 +23,4 @@ const marquee = ({ content = '' }) => {
   )
 }
 
-export default marquee
+export default Marquee

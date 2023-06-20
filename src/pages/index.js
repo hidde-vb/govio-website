@@ -3,13 +3,16 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero'
 import EventPreview from '../components/event-preview'
 import Container from '../components/container'
 import Seo from '../components/seo'
 
+import { GatsbyImage } from 'gatsby-plugin-image'
+import Marquee from '../components/marquee'
+
 class RootIndex extends React.Component {
   render() {
+    const config = get(this, 'props.data.contentfulConfiguration')
     const posts = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
@@ -18,15 +21,53 @@ class RootIndex extends React.Component {
 
         <EventPreview posts={posts} />
 
-        <Container>
-          {posts.length > 6 && (
+        {/* TODO add big more events button*/}
+        {posts.length > 5 && (
+          <Container>
             <Link to="/agenda" activeClassName="active">
               <div role="button" className="button">
                 Bekijk alle events
               </div>
             </Link>
-          )}
+          </Container>
+        )}
+        <Marquee content=".Govio." />
+        <Container>
+          <div className="two-columns">
+            <GatsbyImage
+              className="image"
+              alt="Home"
+              image={config.heroImage.gatsbyImage}
+            />
+            <div className="two-columns__text">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: config.heroText.childMarkdownRemark.html,
+                }}
+              />
+              <Link to="/govio" activeClassName="active">
+                <div role="button" className="button">
+                  Lees meer!
+                </div>
+              </Link>
+            </div>
+          </div>
         </Container>
+        <Container type="highlight">
+          <h3>Waar ben je naar op zoek?</h3>
+          <div>
+          <div role="button" className="linkButton">
+              Agenda
+            </div>
+            <div role="button" className="linkButton">
+              Uitlenen en huren
+            </div>
+            <div role="button" className="linkButton">
+              Lid worden
+            </div>
+          </div>
+        </Container>
+        <Container />
       </Layout>
     )
   }
@@ -53,6 +94,21 @@ export const pageQuery = graphql`
             height: 318
           )
         }
+      }
+    }
+    contentfulConfiguration(title: { eq: "Home" }) {
+      heroText {
+        childMarkdownRemark {
+          html
+        }
+      }
+      heroImage {
+        gatsbyImage(
+          layout: FULL_WIDTH
+          placeholder: DOMINANT_COLOR
+          width: 400
+          height: 300
+        )
       }
     }
   }

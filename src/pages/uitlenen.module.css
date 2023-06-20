@@ -4,8 +4,6 @@
   flex-direction: column;
   margin: 0 auto;
 }
-
-/* Maybe a fun image? */
 .block {
   display: flex;
   justify-content: center;

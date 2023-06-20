@@ -1,18 +1,10 @@
 import React from 'react'
 
-const Container = ({ children, as = 'div' }) => {
-  const Tag = as
-
+const Container = ({ children, type }) => {
   return (
-    <Tag
-      style={{
-        maxWidth: 'var(--size-max-width)',
-        margin: '0 auto',
-        padding: 'var(--space-2xl) var(--size-gutter)',
-      }}
-    >
+    <div className={`container ${type === 'highlight' && 'container--highlight'}`}>
       {children}
-    </Tag>
+    </div>
   )
 }
 
