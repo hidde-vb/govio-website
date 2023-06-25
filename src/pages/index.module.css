@@ -1,0 +1,35 @@
+.linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--size-gutter);
+}
+
+.linkButton {
+  display: inline-block;
+  font-size: var(--text-xl);
+  padding: 1rem;
+  margin: 1rem;
+  font-weight: bold;
+  border: 3px solid var(--black);
+  transition: 0.05s ease-out;
+}
+
+.linkButton:hover {
+    background-color: var(--black);
+    color: var(--white);
+  transform: translateX(5px) translateY(5px);
+}
+
+@media (min-width: 768px) {
+  .linkList {
+    flex-direction: row;
+    margin: 3rem var(--size-gutter);
+  }
+
+  .linkButton {
+    margin: 0;
+  }
+
+}

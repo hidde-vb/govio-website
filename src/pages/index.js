@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import EventPreview from '../components/event-preview'
 import Container from '../components/container'
 import Seo from '../components/seo'
-
-import { GatsbyImage } from 'gatsby-plugin-image'
 import Marquee from '../components/marquee'
+
+import * as styles from './index.module.css'
 
 class RootIndex extends React.Component {
   render() {
@@ -45,26 +46,26 @@ class RootIndex extends React.Component {
                   __html: config.heroText.childMarkdownRemark.html,
                 }}
               />
-              <Link to="/govio" activeClassName="active">
-                <div role="button" className="button">
-                  Lees meer!
-                </div>
-              </Link>
             </div>
           </div>
         </Container>
         <Container type="highlight">
-          <h3>Waar ben je naar op zoek?</h3>
-          <div>
-          <div role="button" className="linkButton">
-              Agenda
-            </div>
-            <div role="button" className="linkButton">
-              Uitlenen en huren
-            </div>
-            <div role="button" className="linkButton">
-              Lid worden
-            </div>
+          <div className={styles.linkList}>
+            <Link to="/agenda">
+              <div role="button" className={styles.linkButton}>
+                Agenda
+              </div>
+            </Link>
+            <Link to="/uitlenen">
+              <div role="button" className={styles.linkButton}>
+                Uitlenen en huren
+              </div>
+            </Link>
+            <Link to="/team">
+              <div role="button" className={styles.linkButton}>
+                Lid worden
+              </div>
+            </Link>
           </div>
         </Container>
         <Container />

@@ -17,6 +17,8 @@ class AgendaIndex extends React.Component {
         <Seo title="Agenda" />
         <Hero title="Agenda" />
 
+        <EventPreview posts={posts} />
+
         <Container>
           <Link to="/archief" activeClassName="active">
             <div role="button" className="button">
@@ -24,8 +26,6 @@ class AgendaIndex extends React.Component {
             </div>
           </Link>
         </Container>
-
-        <EventPreview posts={posts} />
       </Layout>
     )
   }

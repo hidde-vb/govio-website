@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
+
 import * as styles from './uitlenen.module.css'
 
 const WatIsGovioIndex = (props) => {
@@ -27,17 +28,29 @@ const WatIsGovioIndex = (props) => {
         </div>
         <div>
           <div className={styles.list}>
-            <a href="http://www.govio.be/doc/Technische%20fiche.pdf" target="_blank">
+            <a
+              href="http://www.govio.be/doc/Technische%20fiche.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className={`${styles.block} ${styles.block__1}`}>
                 Technische Fiche
               </div>
             </a>
-            <a href="http://www.govio.be/doc/Algemene%20voorwaarden.pdf" target="_blank">
+            <a
+              href="http://www.govio.be/doc/Algemene%20voorwaarden.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className={`${styles.block} ${styles.block__2}`}>
                 Algemene Voorwaarden
               </div>
             </a>
-            <a href="http://www.govio.be/doc/Handleiding.pdf" target="_blank">
+            <a
+              href="http://www.govio.be/doc/Handleiding.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className={styles.block}>Volledige Handleiding</div>
             </a>
           </div>
