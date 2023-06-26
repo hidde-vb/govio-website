@@ -71,6 +71,10 @@ h1 {
   margin: var(--text-2xl) auto;
 }
 
+h2 {
+  font-size: var(--text-2xl);
+}
+
 a {
   color: currentColor;
   text-decoration: none;
@@ -180,5 +184,14 @@ code {
   transform: scale(1.05) translateY(-2px);
 }
 
+.link {
+  border-bottom: 1.5px solid black;
+  font-weight: var(--medium);
+}
+
+.link:hover {
+  border-bottom-color: var(--gruun);
+  color: var(--gruun);
+}
 
 
