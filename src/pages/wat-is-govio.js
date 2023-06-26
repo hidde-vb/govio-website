@@ -4,15 +4,11 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
-import EventPreview from '../components/event-preview'
 
 const WatIsGovioIndex = (props) => {
   return (
     <Layout location={props.location}>
       <Seo title="Wat is Govio" />
-      
-      <Hero title="Govio" />
 
       {/* Somethin about Bar Goof */}
     </Layout>

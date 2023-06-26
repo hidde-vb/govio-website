@@ -53,7 +53,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/blog/" activeClassName="active">
+              <Link to="/organiseren/" activeClassName="active">
                 Organiseren
               </Link>
             </li>
@@ -107,7 +107,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
-          <Link to="/blog/" activeClassName="active">
+          <Link to="/organiseren/" activeClassName="active">
             Organiseren
           </Link>
         </li>

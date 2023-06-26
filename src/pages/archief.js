@@ -4,24 +4,24 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+import Marquee from '../components/marquee'
 import EventPreview from '../components/event-preview'
 
-class AgendaIndex extends React.Component {
+class ArchiefIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
       <Layout location={this.props.location}>
         <Seo title="Archief" />
-        <Hero title="Archief" />
+        <Marquee content="Archief.Archief." />
         <EventPreview posts={posts} />
       </Layout>
     )
   }
 }
 
-export default AgendaIndex
+export default ArchiefIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {

@@ -3,12 +3,20 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const Post = path.resolve('./src/templates/blog-post.js')
+  const eventPage = path.resolve('./src/templates/event-page.js')
+  const projectPage = path.resolve('./src/templates/project-page.js')
+
 
   const result = await graphql(
     `
       {
         allContentfulEvent {
+          nodes {
+            title
+            slug
+          }
+        }
+        allContentfulProject {
           nodes {
             title
             slug
@@ -20,32 +28,42 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your Contentful posts`,
+      `There was an error loading the Events`,
       result.errors
     )
     return
   }
 
-  const posts = result.data.allContentfulEvent.nodes
+  const events = result.data.allContentfulEvent.nodes
+  const projects = result.data.allContentfulProject.nodes
 
-  // Create posts pages
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostSlug = index === 0 ? null : posts[index - 1].slug
-      const nextPostSlug =
-        index === posts.length - 1 ? null : posts[index + 1].slug
+  // Create event pages
+  events.forEach((event, index) => {
+    const previousEventSlug = index === 0 ? null : events[index - 1].slug
+    const nextEventSlug =
+      index === events.length - 1 ? null : events[index + 1].slug
 
-      createPage({
-        path: `/blog/${post.slug}/`,
-        component: Post,
-        context: {
-          slug: post.slug,
-          previousPostSlug,
-          nextPostSlug,
-        },
-      })
+    createPage({
+      path: `/event/${event.slug}/`,
+      component: eventPage,
+      context: {
+        slug: event.slug,
+        previousPostSlug: previousEventSlug,
+        nextPostSlug: nextEventSlug,
+      },
     })
-  }
+  })
+
+  // Create project pages
+  projects.forEach((project, index) => {
+    createPage({
+      path: `/project/${project.slug}/`,
+      component: projectPage,
+      context: {
+        slug: project.slug,
+      },
+    })
+  })
 }
 
 exports.createSchemaCustomization = ({ actions, schema, getNode }) => {

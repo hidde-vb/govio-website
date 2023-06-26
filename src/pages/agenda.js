@@ -4,7 +4,7 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+import Marquee from '../components/marquee'
 import EventPreview from '../components/event-preview'
 import Container from '../components/container'
 
@@ -15,7 +15,7 @@ class AgendaIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Seo title="Agenda" />
-        <Hero title="Agenda" />
+        <Marquee content="Agenda.Agenda." />
 
         <EventPreview posts={posts} />
 

@@ -32,7 +32,7 @@ class RootIndex extends React.Component {
             </Link>
           </Container>
         )}
-        <Marquee content=".Govio." />
+        <Marquee content="Govio.Govio." />
         <Container>
           <div className="two-columns">
             <GatsbyImage

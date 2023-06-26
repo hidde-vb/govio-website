@@ -10,7 +10,7 @@
 .title,
 .subtitle {
   display: block;
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   margin: var(--space-sm) 0;
   padding: 0 var(--space-sm);
   font-weight: 700;
@@ -22,23 +22,13 @@
   font-size: var(--text-lg);
 }
 
-.eventPreview {
+.projectPreview {
   position: relative;
   color: var(--white);
 }
 
-.faded {
-  opacity: 0.7;
-}
-
-.eventPreview:hover:nth-child(3n) {
-  color: var(--gruun);
-}
-.eventPreview:hover:nth-child(3n + 1) {
-  color: var(--rouge);
-}
-.eventPreview:hover:nth-child(3n + 2) {
-  color: var(--turkwaas);
+.projectPreview:hover {
+  outline: var(--space-sm) solid white;
 }
 
 .caption {

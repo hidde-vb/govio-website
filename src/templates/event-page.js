@@ -5,9 +5,9 @@ import get from 'lodash/get'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import * as styles from './blog-post.module.css'
+import * as styles from './pages.module.css'
 
-class BlogPostTemplate extends React.Component {
+class EventPageTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulEvent')
     const previous = get(this.props, 'data.previous')
@@ -18,8 +18,8 @@ class BlogPostTemplate extends React.Component {
         <Seo title={post.title} image={`http:${post.heroImage.resize.src}`} />
         <Hero image={post.heroImage?.gatsbyImage} title={post.title} />
         <div className={styles.container}>
-          <span className={styles.meta}>{post.author?.name} &middot; </span>
           <div className={styles.article}>
+            <span className={styles.meta}>{post.author?.name} &middot; </span>
             <div
               className={styles.body}
               dangerouslySetInnerHTML={{
@@ -31,14 +31,14 @@ class BlogPostTemplate extends React.Component {
                 <ul className={styles.articleNavigation}>
                   {previous && (
                     <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
+                      <Link to={`/event/${previous.slug}`} rel="prev">
                         ← {previous.title}
                       </Link>
                     </li>
                   )}
                   {next && (
                     <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
+                      <Link to={`/event/${next.slug}`} rel="next">
                         {next.title} →
                       </Link>
                     </li>
@@ -53,10 +53,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default EventPageTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query EventPageBySlug(
     $slug: String!
     $previousPostSlug: String
     $nextPostSlug: String

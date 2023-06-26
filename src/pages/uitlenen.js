@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 
 import * as styles from './uitlenen.module.css'
 
-const WatIsGovioIndex = (props) => {
+const UitlenenIndex = (props) => {
   return (
     <Layout location={props.location}>
       <Seo title="Uitlenen" />
@@ -60,7 +60,7 @@ const WatIsGovioIndex = (props) => {
   )
 }
 
-export default WatIsGovioIndex
+export default UitlenenIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {

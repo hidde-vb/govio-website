@@ -13,11 +13,9 @@ const EventPreview = ({ posts }) => {
     <Container>
       <ul className={styles.articleList}>
         {posts.map((post) => {
-          
-
           return (
             <li key={post.slug} className={styles.eventPreview}>
-              <Link to={`/blog/${post.slug}`}>
+              <Link to={`/event/${post.slug}`}>
                 <div className={post.isFuture === false && styles.faded}>
                   <GatsbyImage alt={styles.title} image={post.heroImage.gatsbyImage} />
                   <div className={styles.caption}>
