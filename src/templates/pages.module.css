@@ -1,10 +1,3 @@
-.meta {
-  font-size: var(--text-md);
-  font-style: italic;
-  position: relative;
-  top: -1em;
-}
-
 .article {
   display: grid;
   font-size: var(--text-prose);
@@ -70,6 +63,18 @@
   .article {
     gap: var(--space-xl);
   }
+}
+
+.meta {
+font-size: var(--text-md);
+  float: right;
+  font-weight: 700;
+}
+
+
+.projectText {
+  float: right;
+  padding: .5rem;
 }
 
 @media (min-width: 1024px) {

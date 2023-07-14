@@ -1,0 +1,14 @@
+.link {
+  border-bottom: 1.5px solid black;
+  font-weight: var(--bold);
+}
+
+.link:hover {
+  border-bottom-color: var(--gruun);
+  color: var(--gruun);
+}
+
+.paragraph {
+  max-width: 48rem;
+  line-height: var(--loose);
+}

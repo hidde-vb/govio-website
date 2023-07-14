@@ -61,23 +61,3 @@ const UitlenenIndex = (props) => {
 }
 
 export default UitlenenIndex
-
-export const pageQuery = graphql`
-  query BlogIndexQuery {
-    allContentfulEvent(sort: { publishDate: DESC }) {
-      nodes {
-        title
-        slug
-        publishDate(formatString: "MMMM Do, YYYY")
-        heroImage {
-          gatsbyImage(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 212
-          )
-        }
-      }
-    }
-  }
-`

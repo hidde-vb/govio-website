@@ -63,8 +63,8 @@ const Navigation = () => {
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/uitlenen/" activeClassName="active">
-                Uitlenen
+              <Link to="/studio/" activeClassName="active">
+                BOX Studio
               </Link>
             </li>
           </ul>
@@ -117,8 +117,8 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={`${styles.navigationBarItem} ${styles.button}`}>
-          <Link to="/uitlenen/">
-            Uitlenen
+          <Link to="/studio/">
+            BOX Studio
           </Link>
         </li>
       </ul>
