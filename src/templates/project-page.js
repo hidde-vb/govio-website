@@ -12,7 +12,7 @@ const projectPageTemplate = (props) => {
   const project = get(props, 'data.contentfulProject')
 
   return (
-    <Layout location={this.props.location}>
+    <Layout location={props.location}>
       <Seo
         title={project.title}
         image={`http:${project.heroImage.resize.src}`}
