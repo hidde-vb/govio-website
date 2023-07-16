@@ -10,14 +10,14 @@ import Container from '../components/container'
 
 class AgendaIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulEvent.nodes')
+    const events = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
       <Layout location={this.props.location}>
         <Seo title="Agenda" />
         <Marquee content="Agenda.Agenda." />
 
-        <EventPreview posts={posts} />
+        <EventPreview events={events} />
 
         <Container>
           <Link to="/archief" activeClassName="active">

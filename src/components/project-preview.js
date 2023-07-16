@@ -24,7 +24,7 @@ const PreviewElement = ({ project }) => {
       }}
     >
       <Link to={`/project/${project.slug}`}>
-        <GatsbyImage alt={styles.title} image={project.heroImage.gatsbyImage} />
+        <GatsbyImage alt={project.title} image={project.heroImage.gatsbyImage} />
         <div className={styles.caption}>
           <h2 className={styles.title} style={hover ? hoverCaptionStyle : null}>
             {project.title}

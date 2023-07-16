@@ -9,13 +9,13 @@ import EventPreview from '../components/event-preview'
 
 class ArchiefIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulEvent.nodes')
+    const events = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
       <Layout location={this.props.location}>
         <Seo title="Archief" />
         <Marquee content="Archief.Archief." />
-        <EventPreview posts={posts} />
+        <EventPreview events={events} />
       </Layout>
     )
   }

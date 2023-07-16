@@ -10,11 +10,8 @@ import EventPreview from '../components/event-preview'
 import * as styles from './studio.module.css'
 
 const StudioIndex = (props) => {
-  const project = get(props, 'data.contentfulProject')
-
-  const posts = get(props, 'data.allContentfulEvent.nodes')
-
-  console.log('events', posts)
+  const studioProject = get(props, 'data.contentfulProject')
+  const studioEvents = get(props, 'data.allContentfulEvent.nodes')
 
   return (
     <Layout location={props.location}>
@@ -23,7 +20,7 @@ const StudioIndex = (props) => {
         <div className={styles.paragraph}>
           <div
             dangerouslySetInnerHTML={{
-              __html: project.body.childMarkdownRemark.html,
+              __html: studioProject.body.childMarkdownRemark.html,
             }}
           ></div>
           <a
@@ -36,10 +33,10 @@ const StudioIndex = (props) => {
           </a>
         </div>
 
-        {posts?.length > 0 && (
+        {studioEvents?.length > 0 && (
           <>
             <h2>Gerelateerde evenementen</h2>
-            <EventPreview posts={posts} />
+            <EventPreview events={studioEvents} />
           </>
         )}
       </Container>

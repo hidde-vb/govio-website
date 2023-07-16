@@ -31,14 +31,17 @@
   opacity: 0.7;
 }
 
-.eventPreview:hover:nth-child(3n) {
-  color: var(--gruun);
-}
 .eventPreview:hover:nth-child(3n + 1) {
   color: var(--rouge);
+  outline: var(--space-sm) solid var(--rouge);
 }
 .eventPreview:hover:nth-child(3n + 2) {
-  color: var(--turkwaas);
+  color: var(--geil);
+  outline: var(--space-sm) solid var(--geil);
+}
+.eventPreview:hover:nth-child(3n) {
+  color: var(--gruun);
+  outline: var(--space-sm) solid var(--gruun);
 }
 
 .caption {
@@ -58,5 +61,3 @@
     grid-template-columns: repeat(100px);
   }
 }
-
-

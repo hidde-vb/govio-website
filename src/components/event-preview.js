@@ -5,14 +5,13 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Container from './container'
 import * as styles from './event-preview.module.css'
 
-const EventPreview = ({ posts }) => {
-  if (!posts) return null
-  if (!Array.isArray(posts)) return null
+const EventPreview = ({ events }) => {
+  if (!events || !Array.isArray(events)) return null
 
   return (
     <Container>
       <ul className={styles.articleList}>
-        {posts.map((post) => {
+        {events.map((post) => {
           return (
             <li key={post.slug} className={styles.eventPreview}>
               <Link to={`/event/${post.slug}`}>

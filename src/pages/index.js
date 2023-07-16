@@ -4,26 +4,26 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+import Marquee from '../components/marquee'
 import EventPreview from '../components/event-preview'
 import Container from '../components/container'
 import Seo from '../components/seo'
-import Marquee from '../components/marquee'
 
 import * as styles from './index.module.css'
 
 class RootIndex extends React.Component {
   render() {
     const config = get(this, 'props.data.contentfulConfiguration')
-    const posts = get(this, 'props.data.allContentfulEvent.nodes')
+    const events = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
       <Layout location={this.props.location}>
         <Seo title="Home" />
 
-        <EventPreview posts={posts} />
+        <EventPreview events={events} />
 
         {/* TODO add big more events button*/}
-        {posts.length > 5 && (
+        {events.length > 5 && (
           <Container>
             <Link to="/agenda" activeClassName="active">
               <div role="button" className="button">
@@ -51,11 +51,14 @@ class RootIndex extends React.Component {
         </Container>
         <Container type="highlight">
           <div className={styles.linkList}>
-            <Link to="/agenda">
-              <div role="button" className={styles.linkButton}>
-                Agenda
-              </div>
-            </Link>
+            <div>
+              <Link to="/agenda">
+                <div role="button" className={styles.linkButton}>
+                  Agenda
+                </div>
+              </Link>
+            </div>
+
             <Link to="/uitlenen">
               <div role="button" className={styles.linkButton}>
                 Uitlenen en huren

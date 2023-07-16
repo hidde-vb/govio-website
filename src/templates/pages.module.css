@@ -2,7 +2,7 @@
   display: grid;
   font-size: var(--text-prose);
   gap: var(--space-xl);
-  letter-spacing: var(--text-prose-tracking);
+  letter-spacing: var(--n);
   line-height: var(--loose);
   padding: var(--size-gutter) var(--size-gutter) calc(var(--size-gutter) * 2);
 }
