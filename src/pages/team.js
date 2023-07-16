@@ -34,6 +34,11 @@ export const pageQuery = graphql`
         title
         name
         active
+        shortBio {
+          childMarkdownRemark {
+            html
+          }
+        }
         image {
           gatsbyImage(
             layout: FULL_WIDTH

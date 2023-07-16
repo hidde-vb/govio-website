@@ -8,6 +8,8 @@ const PersonList = ({ persons }) => (
   <Container>
     <ul className={styles.personList}>
       {persons.map((person) => {
+        const bio = person.shortBio?.childMarkdownRemark?.html
+
         return (
           <li key={person.name} className={styles.personPreview}>
             <div>
@@ -18,6 +20,12 @@ const PersonList = ({ persons }) => (
               />
               <div className={styles.caption}>
                 <h2>{person.name}</h2>
+                {bio && (
+                  <div
+                    className={styles.captionBio}
+                    dangerouslySetInnerHTML={{ __html: bio }}
+                  />
+                )}
               </div>
             </div>
           </li>

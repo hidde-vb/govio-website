@@ -5,6 +5,7 @@ import * as styles from './footer.module.css'
 import wavesImage from '../../static/images/waves.png'
 import facebookGlyph from '../../static/images/facebook-glyph.png'
 import instagramGlyph from '../../static/images/instagram-glyph.png'
+import { Link } from 'gatsby'
 
 const Footer = () => (
   <div className={styles.footer} as="footer">
@@ -65,9 +66,9 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <a className={styles.link} href="/help">
+        <Link className={styles.link} to="/privacy">
           Cookies and Privacy
-        </a>{' '}
+        </Link>{' '}
         &middot; Built by{' '}
         <a className={styles.link} href="https://hidde.cc/">
           Hidde

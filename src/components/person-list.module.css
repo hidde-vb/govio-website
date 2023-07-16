@@ -25,3 +25,8 @@
   bottom: 0;
   left: 0;
 }
+
+.captionBio {
+  font-size: var(--text-sm);
+  line-height: 0.5;
+}

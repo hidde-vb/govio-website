@@ -184,6 +184,12 @@ code {
   transform: scale(1.05) translateY(-2px);
 }
 
+.paragraph {
+  max-width: 52rem;
+  line-height: var(--loose);
+  padding-bottom: var(--space-3xl);
+}
+
 .link {
   border-bottom: 1.5px solid black;
   font-weight: var(--medium);

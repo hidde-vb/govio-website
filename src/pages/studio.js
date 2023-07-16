@@ -17,7 +17,7 @@ const StudioIndex = (props) => {
     <Layout location={props.location}>
       <Seo title="Studio" />
       <Container>
-        <div className={styles.paragraph}>
+        <div className="paragraph">
           <div
             dangerouslySetInnerHTML={{
               __html: studioProject.body.childMarkdownRemark.html,

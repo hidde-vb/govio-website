@@ -9,6 +9,7 @@ const NotFoundPage = () => (
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: '8rem',
       }}
     >
       <h1>404</h1>
