@@ -6,22 +6,6 @@
   margin: var(--size-gutter);
 }
 
-.linkButton {
-  display: inline-block;
-  font-size: var(--text-xl);
-  padding: 1rem;
-  margin: 1rem;
-  font-weight: bold;
-  border: 3px solid var(--black);
-  transition: 0.05s ease-out;
-}
-
-.linkButton:hover {
-    background-color: var(--black);
-    color: var(--white);
-  transform: translateX(5px) translateY(5px);
-}
-
 @media (min-width: 768px) {
   .linkList {
     flex-direction: row;
@@ -31,5 +15,4 @@
   .linkButton {
     margin: 0;
   }
-
 }

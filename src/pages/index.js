@@ -63,19 +63,19 @@ const RootIndex = (props) => {
         <div className={styles.linkList}>
           <div>
             <Link to="/agenda">
-              <div role="button" className={styles.linkButton}>
+              <div role="button" className="button">
                 Agenda
               </div>
             </Link>
           </div>
 
           <Link to="/uitlenen">
-            <div role="button" className={styles.linkButton}>
+            <div role="button" className="button">
               Uitlenen en huren
             </div>
           </Link>
           <Link to="/team">
-            <div role="button" className={styles.linkButton}>
+            <div role="button" className="button">
               Lid worden
             </div>
           </Link>

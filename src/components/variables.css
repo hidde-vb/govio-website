@@ -14,6 +14,7 @@
   /* radii */
   --radius-sm: 4px;
 
+
   /* spacing */
   --space-sm: 4px;
   --space-md: 8px;
@@ -64,6 +65,7 @@
   --text-lead: var(--text-lg);
   --text-prose: var(--text-lg);
   --text-title: var(--text-3xl);
+  --big-border: 10px;
   /* tracking */
   --text-prose-tracking: -0.011em;
 

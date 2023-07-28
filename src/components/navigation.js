@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import * as styles from './navigation.module.css'
 import logoBlack from '../../static/images/logo-black.png'
 import logoWhite from '../../static/images/logo-white.png'
+import logoTurkwaas from '../../static/images/logo-turkwaas.png'
+import logoRouge from '../../static/images/logo-rouge.png'
 
 const Navigation = () => {
   const [open, setOpen] = useState(false)
@@ -36,7 +38,6 @@ const Navigation = () => {
             <img className={styles.logo} alt="Logo" src={logoWhite} />
           </Link>
           <ul className={styles.menu}>
-
             <li className={styles.menuItem}>
               <Link to="/agenda" activeClassName="active">
                 Agenda
@@ -101,9 +102,14 @@ const Navigation = () => {
             Team
           </Link>
         </li>
-        <li>
+        <li className={styles.navigationBarLogo}>
           <Link to="/">
-            <img className={styles.navigationBarLogo} alt="Logo" src={logoBlack} />
+            <img
+              alt="Logo"
+              src={logoBlack}
+            />
+            <img className={styles.logoLeft} src={logoTurkwaas} />
+            <img className={styles.logoRight} src={logoRouge} />
           </Link>
         </li>
         <li className={styles.navigationBarItem}>
@@ -117,9 +123,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={`${styles.navigationBarItem} ${styles.button}`}>
-          <Link to="/studio/">
-            BOX Studio
-          </Link>
+          <Link to="/studio/">BOX Studio</Link>
         </li>
       </ul>
     </nav>

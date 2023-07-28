@@ -1,5 +1,5 @@
 nav {
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--space-3xl);
 }
 
 .logo {
@@ -96,9 +96,25 @@ nav {
   color: var(--turkwaas);
 }
 
-.navigationBarLogo {
+.navigationBarLogo * {
   width: 14rem;
 }
+
+.logoLeft, .logoRight {
+  position: absolute;
+  z-index: -1;
+  top:0;
+  transition: transform 0.2s ease-out;
+}
+
+.navigationBarLogo:hover .logoLeft {
+  transform: translateX(-.5rem);
+}
+.navigationBarLogo:hover .logoRight {
+  transform: translateX(.5rem);
+}
+
+
 
 @media screen and (min-width: 1024px) {
   .hamburger,
