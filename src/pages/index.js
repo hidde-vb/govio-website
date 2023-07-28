@@ -10,6 +10,7 @@ import Container from '../components/container'
 import Seo from '../components/seo'
 
 import * as styles from './index.module.css'
+import MemberButton from '../components/memberButton'
 
 const RootIndex = (props) => {
   const config = get(props, 'data.contentfulConfiguration')
@@ -74,11 +75,7 @@ const RootIndex = (props) => {
               Uitlenen en huren
             </div>
           </Link>
-          <Link to="/team">
-            <div role="button" className="button">
-              Lid worden
-            </div>
-          </Link>
+          <MemberButton />
         </div>
       </Container>
       <Container />

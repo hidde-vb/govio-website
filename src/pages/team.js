@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Marquee from '../components/marquee'
 import Container from '../components/container'
 import PersonList from '../components/person-list'
+import MemberButton from '../components/memberButton'
 
 const TeamIndex = (props) => {
   const people = get(props, 'data.allContentfulPerson.nodes')
@@ -22,20 +23,21 @@ const TeamIndex = (props) => {
 
       <Marquee content="Vrijwilligers." />
       <Container>
-        <p>
-          Het jeugdhuis wordt volledig gedragen door vrijwilligers. Is de bar
-          open? Kom je naar een event? Zie je reclame op de weg of vind je een
-          poster mooi? Dat is allemaal te danken aan het sterk team van
-          vrijwilligers. Zij zorgen ervoor dat het steeds aangenaam vertroeven
-          is in de Govio. Ieder engagement is zonder verplichtingen en volledig
-          vanuit eigen initiatief. Jij bent 1000% welkom om deel uit te maken
-          van het team! De <span className="org-blue">blauwe</span>,{' '}
-          <span className="org-purple">paarse</span>,{' '}
-          <span className="org-orange">oranje</span> en{' '}
-          <span className="org-purple-2">donkerpaarse</span> bol op de foto
-          hieronder worden uitgevoerd door de leden. Zij zijn dus dé bazen van’t
-          jeugdhuis! Voor ieder evenement zijn we steeds opzoek naar:
-        </p>
+          <MemberButton />
+          <p>
+            Het jeugdhuis wordt volledig gedragen door vrijwilligers. Is de bar
+            open? Kom je naar een event? Zie je reclame op de weg of vind je een
+            poster mooi? Dat is allemaal te danken aan het sterk team van
+            vrijwilligers. Zij zorgen ervoor dat het steeds aangenaam vertroeven
+            is in de Govio. Ieder engagement is zonder verplichtingen en
+            volledig vanuit eigen initiatief. Jij bent 1000% welkom om deel uit
+            te maken van het team! De <span className="org-blue">blauwe</span>,{' '}
+            <span className="org-purple">paarse</span>,{' '}
+            <span className="org-orange">oranje</span> en{' '}
+            <span className="org-purple-2">donkerpaarse</span> bol op de foto
+            hieronder worden uitgevoerd door de leden. Zij zijn dus dé bazen
+            van’t jeugdhuis! Voor ieder evenement zijn we steeds opzoek naar:
+          </p>
 
         <div className="two-columns">
           <h3>Inkommedewerkers</h3>

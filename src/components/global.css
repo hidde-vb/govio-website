@@ -177,11 +177,23 @@ code {
   transition: 0.05s ease-out;
 }
 
+.button--inverse {
+  color: var(--white);
+  border: 3px solid var(--white);
+}
+
 .button:hover {
   background-color: var(--black);
   color: var(--white);
   transform: translateX(5px) translateY(5px);
 }
+
+.button--inverse:hover {
+  background-color: var(--white);
+  color: var(--black);
+  transform: translateX(5px) translateY(5px);
+}
+
 
 .paragraph {
   max-width: 52rem;

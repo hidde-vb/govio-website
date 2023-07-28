@@ -8,7 +8,7 @@ import facebookGlyph from '../../static/images/facebook-glyph.png'
 import instagramGlyph from '../../static/images/instagram-glyph.png'
 import kmLogo from '../../static/images/km-logo.png'
 import vlLogo from '../../static/images/vl-logo.png'
-
+import MemberButton from './memberButton'
 
 const Footer = () => (
   <div className={styles.footer} as="footer">
@@ -41,7 +41,7 @@ const Footer = () => (
               <b>Do</b> 10 - 17
             </li>
             <li>
-              <b>Vr</b> 13 - 17, Bar 20 - ??
+              <b>Vr</b> 13 - 17, Bar 21 - ??
             </li>
             <li>
               <b>Za</b> afhankelijk van evenementen
@@ -66,6 +66,7 @@ const Footer = () => (
               <img className={styles.glyph} src={instagramGlyph} alt="I" />
             </a>
           </div>
+          <MemberButton inverse />
         </div>
       </div>
       <div className={styles.rowContainer}>

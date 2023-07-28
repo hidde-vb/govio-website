@@ -48,6 +48,8 @@ h3 {
 .socials {
   display: flex;
   flex-direction: row;
+  padding-bottom: 2rem;
+  min-width: 10rem;
 }
 
 .glyph {
