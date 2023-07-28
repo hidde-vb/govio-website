@@ -49,11 +49,6 @@ export default StudioIndex
 export const pageQuery = graphql`
   query StudioIndexQuery {
     contentfulProject(title: { eq: "BOX Studio" }) {
-      title
-      slug
-      color {
-        value
-      }
       body {
         childMarkdownRemark {
           html

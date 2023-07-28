@@ -108,8 +108,8 @@ const Navigation = () => {
               alt="Logo"
               src={logoBlack}
             />
-            <img className={styles.logoLeft} src={logoTurkwaas} />
-            <img className={styles.logoRight} src={logoRouge} />
+            <img className={styles.logoLeft} alt="" src={logoTurkwaas} />
+            <img className={styles.logoRight} alt="" src={logoRouge} />
           </Link>
         </li>
         <li className={styles.navigationBarItem}>

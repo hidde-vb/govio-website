@@ -23,21 +23,20 @@ const TeamIndex = (props) => {
 
       <Marquee content="Vrijwilligers." />
       <Container>
-          <MemberButton />
-          <p>
-            Het jeugdhuis wordt volledig gedragen door vrijwilligers. Is de bar
-            open? Kom je naar een event? Zie je reclame op de weg of vind je een
-            poster mooi? Dat is allemaal te danken aan het sterk team van
-            vrijwilligers. Zij zorgen ervoor dat het steeds aangenaam vertroeven
-            is in de Govio. Ieder engagement is zonder verplichtingen en
-            volledig vanuit eigen initiatief. Jij bent 1000% welkom om deel uit
-            te maken van het team! De <span className="org-blue">blauwe</span>,{' '}
-            <span className="org-purple">paarse</span>,{' '}
-            <span className="org-orange">oranje</span> en{' '}
-            <span className="org-purple-2">donkerpaarse</span> bol op de foto
-            hieronder worden uitgevoerd door de leden. Zij zijn dus dé bazen
-            van’t jeugdhuis! Voor ieder evenement zijn we steeds opzoek naar:
-          </p>
+        <p>
+          Het jeugdhuis wordt volledig gedragen door vrijwilligers. Is de bar
+          open? Kom je naar een event? Zie je reclame op de weg of vind je een
+          poster mooi? Dat is allemaal te danken aan het sterk team van
+          vrijwilligers. Zij zorgen ervoor dat het steeds aangenaam vertroeven
+          is in de Govio. Ieder engagement is zonder verplichtingen en volledig
+          vanuit eigen initiatief. Jij bent 1000% welkom om deel uit te maken
+          van het team! De <span className="org-blue">blauwe</span>,{' '}
+          <span className="org-purple">paarse</span>,{' '}
+          <span className="org-orange">oranje</span> en{' '}
+          <span className="org-purple-2">donkerpaarse</span> bol op de foto
+          hieronder worden uitgevoerd door de leden. Zij zijn dus dé bazen van’t
+          jeugdhuis! Voor ieder evenement zijn we steeds opzoek naar:
+        </p>
 
         <div className="two-columns">
           <h3>Inkommedewerkers</h3>
@@ -89,6 +88,7 @@ const TeamIndex = (props) => {
             en leert organiseren. Daarnaast amuseer je je rot met het team!
           </div>
         </div>
+        <MemberButton />
         <GatsbyImage
           style={{ maxWidth: '768px', margin: '2rem auto', border: '0' }}
           className="image"
@@ -109,6 +109,7 @@ const TeamIndex = (props) => {
       <PersonList persons={Bestuur} />
 
       <Marquee content="Beroepskrachten." />
+
       {config.vacature && (
         <Container>
           <div
@@ -119,6 +120,15 @@ const TeamIndex = (props) => {
           />
         </Container>
       )}
+
+      <Container>
+        Er komt natuurlijk veel kijken bij het reilen en zeilen van het
+        jeugdhuis. Naast de algemene werking zijn er ook een aantal bovenlokale
+        projecten gaande. Om dit in goede banen te leiden, werken er twee
+        voltijdse beroepskrachten voor de Govio. Zij zijn een belangrijk
+        aanspreekpunt en bij hen kan je terecht voor al je vragen, raad, ideeën,
+        frustraties, of plannen en dromen. Zij helpen je verder! Wie zijn ze?
+      </Container>
       <PersonList persons={BKs} />
     </Layout>
   )
