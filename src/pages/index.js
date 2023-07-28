@@ -11,70 +11,79 @@ import Seo from '../components/seo'
 
 import * as styles from './index.module.css'
 
-class RootIndex extends React.Component {
-  render() {
-    const config = get(this, 'props.data.contentfulConfiguration')
-    const events = get(this, 'props.data.allContentfulEvent.nodes')
+const RootIndex = (props) => {
+  const config = get(props, 'data.contentfulConfiguration')
+  const events = get(props, 'data.allContentfulEvent.nodes')
 
-    return (
-      <Layout location={this.props.location}>
-        <Seo title="Home" />
+  return (
+    <Layout location={props.location}>
+      <Seo title="Home" />
 
-        <EventPreview events={events} />
-
-        {/* TODO add big more events button*/}
-        {events.length > 5 && (
-          <Container>
-            <Link to="/agenda" activeClassName="active">
-              <div role="button" className="button">
-                Bekijk alle events
-              </div>
-            </Link>
-          </Container>
-        )}
-        <Marquee content="Govio.Govio." />
+      {config.vacature && (
         <Container>
-          <div className="two-columns">
-            <GatsbyImage
-              className="image"
-              alt="Home"
-              image={config.heroImage.gatsbyImage}
-            />
-            <div className="two-columns__text">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: config.heroText.childMarkdownRemark.html,
-                }}
-              />
-            </div>
-          </div>
+          <div
+            className="news"
+            dangerouslySetInnerHTML={{
+              __html: config.vacatureText.childMarkdownRemark.html,
+            }}
+          ></div>
         </Container>
-        <Container type="highlight">
-          <div className={styles.linkList}>
-            <div>
-              <Link to="/agenda">
-                <div role="button" className={styles.linkButton}>
-                  Agenda
-                </div>
-              </Link>
-            </div>
+      )}
 
-            <Link to="/uitlenen">
+      {/* TODO add big more events button*/}
+      <EventPreview events={events} />
+
+      {events.length > 5 && (
+        <Container>
+          <Link to="/agenda" activeClassName="active">
+            <div role="button" className="button">
+              Bekijk alle events
+            </div>
+          </Link>
+        </Container>
+      )}
+      <Marquee content="Govio.Govio." />
+      <Container>
+        <div className="two-columns">
+          <GatsbyImage
+            className="image"
+            alt="Home"
+            image={config.heroImage.gatsbyImage}
+          />
+          <div className="two-columns__text">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: config.heroText.childMarkdownRemark.html,
+              }}
+            />
+          </div>
+        </div>
+      </Container>
+      <Container type="highlight">
+        <div className={styles.linkList}>
+          <div>
+            <Link to="/agenda">
               <div role="button" className={styles.linkButton}>
-                Uitlenen en huren
-              </div>
-            </Link>
-            <Link to="/team">
-              <div role="button" className={styles.linkButton}>
-                Lid worden
+                Agenda
               </div>
             </Link>
           </div>
-        </Container>
-        <Container />
-      </Layout>
-    )
-  }
+
+          <Link to="/uitlenen">
+            <div role="button" className={styles.linkButton}>
+              Uitlenen en huren
+            </div>
+          </Link>
+          <Link to="/team">
+            <div role="button" className={styles.linkButton}>
+              Lid worden
+            </div>
+          </Link>
+        </div>
+      </Container>
+      <Container />
+    </Layout>
+  )
 }
 
 export default RootIndex
@@ -113,6 +122,12 @@ export const pageQuery = graphql`
           width: 400
           height: 300
         )
+      }
+      vacature
+      vacatureText {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }

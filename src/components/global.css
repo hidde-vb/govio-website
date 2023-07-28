@@ -190,14 +190,19 @@ code {
   padding-bottom: var(--space-3xl);
 }
 
-.link {
+.link, .news a {
   border-bottom: 1.5px solid black;
   font-weight: var(--medium);
 }
 
-.link:hover {
+.link:hover, .news a:hover {
   border-bottom-color: var(--gruun);
   color: var(--gruun);
 }
 
+.news {
+  background-color: var(--roos);
+  line-height: 1.0;
+  padding: var(--space-sm) var(--space-lg);
+}
 

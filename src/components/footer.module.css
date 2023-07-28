@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  position: relative;
   padding-top: var(--size-gutter);
   color: var(--white);
   background-color: var(--black);
@@ -14,6 +15,7 @@
 }
 
 .columnsContainer {
+  
   display: flex;
   font-size: var(--text-lg);
   flex-direction: column;
@@ -23,6 +25,13 @@
 
 .column {
   padding-right: 4rem;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: var(--size-gutter);
 }
 
 .list {
@@ -48,6 +57,12 @@ h3 {
   margin: 12px 10px 0 10px;
 }
 
+.logo {
+  width: 200px;
+  align-self: center;
+  margin-right: 1rem;
+}
+
 .link {
   border-bottom: 1.5px solid white;
   font-weight: var(--medium);
@@ -60,7 +75,7 @@ h3 {
 
 .wave {
   display: none;
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
 }
@@ -70,6 +85,10 @@ h3 {
     display: block;
     width: 24rem;
     height: 24rem;
+  }
+
+  .textContainer {
+    padding-left: 28rem;
   }
 }
 

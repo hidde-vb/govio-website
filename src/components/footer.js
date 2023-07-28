@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import * as styles from './footer.module.css'
 
 import wavesImage from '../../static/images/waves.png'
 import facebookGlyph from '../../static/images/facebook-glyph.png'
 import instagramGlyph from '../../static/images/instagram-glyph.png'
-import { Link } from 'gatsby'
+import kmLogo from '../../static/images/km-logo.png'
+import vlLogo from '../../static/images/vl-logo.png'
+
 
 const Footer = () => (
   <div className={styles.footer} as="footer">
@@ -64,6 +67,10 @@ const Footer = () => (
             </a>
           </div>
         </div>
+      </div>
+      <div className={styles.rowContainer}>
+        <img className={styles.logo} src={kmLogo} alt="Kalmthout" />
+        <img className={styles.logo} src={vlLogo} alt="Vlaanderen" />
       </div>
       <div>
         <Link className={styles.link} to="/privacy">
