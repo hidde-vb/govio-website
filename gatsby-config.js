@@ -7,6 +7,7 @@ module.exports = {
     title: 'Govio Website',
   },
   plugins: [
+    . gatsby-plugin-netlify',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
