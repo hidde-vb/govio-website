@@ -1,12 +1,8 @@
 {
   "name": "govio-website",
   "description": "Govio Website",
-  "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Hidde van Bavel <hiddevanbavel@hotmail.com>",
-  "bugs": {
-    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
-  },
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
     "gatsby": "^5.5.0",
@@ -24,7 +20,6 @@
   },
   "devDependencies": {
     "contentful-import": "^8.3.2",
-    "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-provision-contentful": "^0.0.5",
     "netlify-cli": "^10.0.0"
   },
@@ -33,7 +28,6 @@
   },
   "homepage": "https://www.govio.be",
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hidde-vb/govio-website.git"
