@@ -18,7 +18,7 @@ const projectPageTemplate = (props) => {
         image={`http:${project.heroImage.resize.src}`}
       />
       <Container>
-        <Link to="projecten" rel="prev">
+        <Link to="../../projecten" rel="prev">
           ← projecten
         </Link>
       </Container>

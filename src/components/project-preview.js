@@ -8,8 +8,8 @@ import * as styles from './project-preview.module.css'
 const PreviewElement = ({ project }) => {
   const [hover, setHover] = useState(false)
 
-  const hoverCaptionStyle = { color: project.color.value }
-  const hoverPreviewStyle = { outlineColor: project.color.value }
+  const hoverCaptionStyle = { color: project?.color?.value || '#1effc8' }
+  const hoverPreviewStyle = { outlineColor: project?.color?.value || '#1effc8' }
 
   return (
     <li

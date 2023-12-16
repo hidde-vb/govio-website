@@ -20,7 +20,7 @@ const RootIndex = (props) => {
     <Layout location={props.location}>
       <Seo title="Home" />
 
-      {config.vacature && (
+      {config.vacature && config.vacatureText && (
         <Container>
           <div
             className="news"
@@ -70,7 +70,7 @@ const RootIndex = (props) => {
             </Link>
           </div>
 
-          <Link to="/uitlenen">
+          <Link to="/organiseren">
             <div role="button" className="button">
               Uitlenen en huren
             </div>

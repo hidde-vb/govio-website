@@ -110,7 +110,7 @@ const TeamIndex = (props) => {
 
       <Marquee content="Beroepskrachten." />
 
-      {config.vacature && (
+      {config.vacature && config.vacatureText && (
         <Container>
           <div
             className="news"

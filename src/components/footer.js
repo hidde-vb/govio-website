@@ -78,7 +78,7 @@ const Footer = () => (
           Cookies and Privacy
         </Link>{' '}
         &middot; Built by{' '}
-        <a className={styles.link} href="https://hidde.cc/">
+        <a className={styles.link} href="http://www.hidde.cc/">
           Hidde
         </a>{' '}
         &middot; © 2023 Govio
