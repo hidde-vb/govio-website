@@ -62,13 +62,11 @@ const RootIndex = (props) => {
       </Container>
       <Container type="highlight">
         <div className={styles.linkList}>
-          <div>
-            <Link to="/agenda">
-              <div role="button" className="button">
-                Agenda
-              </div>
-            </Link>
-          </div>
+          <Link to="/agenda">
+            <div role="button" className="button">
+              Agenda
+            </div>
+          </Link>
 
           <Link to="/organiseren">
             <div role="button" className="button">

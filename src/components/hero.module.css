@@ -6,6 +6,7 @@
   min-height: 200px;
   padding: 0 0 var(--size-gutter);
   position: relative;
+  overflow: hidden;
 }
 
 .image {
@@ -31,7 +32,6 @@
   line-height: var(--solid);
   margin: 0 0 var(--space-xl);
   background-color: var(--white);
-  white-space: nowrap;
   padding: var(--size-gutter) 0;
 }
 

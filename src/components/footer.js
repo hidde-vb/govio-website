@@ -18,7 +18,7 @@ const Footer = () => (
         <div className={styles.column}>
           <h3>GOVIO</h3>
           <ul className={styles.list}>
-            <li>tel. 03 666 22 24</li>
+            <li>03 666 22 24</li>
             <li>
               <a href="mailto:info@govio.be">info@govio.be</a>
             </li>
