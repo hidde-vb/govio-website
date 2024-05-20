@@ -1,20 +1,20 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
+import Container from '../components/container'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import Container from '../components/container'
 import MemberButton from '../components/memberButton'
+import Seo from '../components/seo'
 
 const WatIsGovioIndex = (props) => {
   const config = get(props, 'data.contentfulConfiguration')
   const BarGoofProject = get(props, 'data.contentfulProject')
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Wat is Govio" />
 
       <Container>

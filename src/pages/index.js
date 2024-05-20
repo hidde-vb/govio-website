@@ -1,23 +1,23 @@
-import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import get from 'lodash/get'
+import React from 'react'
 
+import Container from '../components/container'
+import EventPreview from '../components/event-preview'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import EventPreview from '../components/event-preview'
-import Container from '../components/container'
 import Seo from '../components/seo'
 
-import * as styles from './index.module.css'
 import MemberButton from '../components/memberButton'
+import * as styles from './index.module.css'
 
 const RootIndex = (props) => {
   const config = get(props, 'data.contentfulConfiguration')
   const events = get(props, 'data.allContentfulEvent.nodes')
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Home" />
 
       {config.vacature && config.vacatureText && (

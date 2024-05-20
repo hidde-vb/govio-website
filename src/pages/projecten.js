@@ -1,18 +1,18 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
+import Container from '../components/container'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import Container from '../components/container'
 import ProjectPreview from '../components/project-preview'
+import Seo from '../components/seo'
 
 const ProjectsIndex = (props) => {
   const projects = get(props, 'data.allContentfulProject.nodes')
   
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Projecten" />
       <Marquee content=".Projects" />
       <Container>

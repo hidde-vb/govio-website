@@ -1,19 +1,20 @@
-import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
+
+import Container from '../components/container'
+import EventPreview from '../components/event-preview'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import EventPreview from '../components/event-preview'
-import Container from '../components/container'
+import Seo from '../components/seo'
 
 class AgendaIndex extends React.Component {
   render() {
     const events = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <Seo title="Agenda" />
         <Marquee content="Agenda.Agenda." />
 

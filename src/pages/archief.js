@@ -1,18 +1,18 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
+import EventPreview from '../components/event-preview'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import EventPreview from '../components/event-preview'
+import Seo from '../components/seo'
 
 class ArchiefIndex extends React.Component {
   render() {
     const events = get(this, 'props.data.allContentfulEvent.nodes')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <Seo title="Archief" />
         <Marquee content="Archief.Archief." />
         <EventPreview events={events} />

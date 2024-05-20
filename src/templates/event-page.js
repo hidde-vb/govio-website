@@ -1,10 +1,10 @@
-import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Hero from '../components/hero'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 import * as styles from './pages.module.css'
 
 const EventPageTemplate = (props) => {
@@ -15,7 +15,7 @@ const EventPageTemplate = (props) => {
   const projectStyle = { backgroundColor: event.project?.color.value }
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title={event.title} image={`http:${event.heroImage.resize.src}`} />
       <Hero image={event.heroImage?.gatsbyImage} title={event.title} />
       <div className={styles.container}>

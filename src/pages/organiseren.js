@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Container from '../components/container'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 import * as styles from './organiseren.module.css'
 
-const OrganiserenIndex = (props) => {
+const OrganiserenIndex = () => {
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Organiseren" />
       <Container>
         <div className="two-columns">
@@ -89,6 +89,7 @@ const OrganiserenIndex = (props) => {
             <a
               target="_blank"
               href="https://docs.google.com/forms/d/e/1FAIpQLSc-Lf47rTm5NYSVbp7UvuJSqjnjaFI8ZnvJze-ACV1kd9e9Iw/viewform"
+              rel="noreferrer"
             >
               <div className="button">Aanvraag indienen</div>
             </a>

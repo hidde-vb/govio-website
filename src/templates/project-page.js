@@ -1,18 +1,19 @@
-import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
+
 
 import Container from '../components/container'
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Hero from '../components/hero'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 import * as styles from './pages.module.css'
 
 const projectPageTemplate = (props) => {
   const project = get(props, 'data.contentfulProject')
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo
         title={project.title}
         image={`http:${project.heroImage.resize.src}`}

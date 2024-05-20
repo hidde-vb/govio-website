@@ -1,11 +1,11 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Container from '../components/container'
 import EventPreview from '../components/event-preview'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 import * as styles from './studio.module.css'
 
@@ -14,7 +14,7 @@ const StudioIndex = (props) => {
   const studioEvents = get(props, 'data.allContentfulEvent.nodes')
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Studio" />
       <Container>
         <div className="paragraph">

@@ -1,7 +1,7 @@
 {
   "name": "govio-website",
   "description": "Govio Website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Hidde van Bavel <hiddevanbavel@hotmail.com>",
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",

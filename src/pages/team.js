@@ -1,14 +1,15 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
+
+import Container from '../components/container'
 import Layout from '../components/layout'
 import Marquee from '../components/marquee'
-import Container from '../components/container'
-import PersonList from '../components/person-list'
 import MemberButton from '../components/memberButton'
+import PersonList from '../components/person-list'
+import Seo from '../components/seo'
 
 const TeamIndex = (props) => {
   const people = get(props, 'data.allContentfulPerson.nodes')
@@ -18,7 +19,7 @@ const TeamIndex = (props) => {
   const Bestuur = people.filter((people) => people.title === 'Bestuur')
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <Seo title="Team" />
 
       <Marquee content="Vrijwilligers." />
