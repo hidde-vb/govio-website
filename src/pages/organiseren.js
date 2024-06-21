@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Container from '../components/container'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 import * as styles from './organiseren.module.css'
 
@@ -96,7 +96,7 @@ const OrganiserenIndex = (props) => {
           <div>
             <div className={styles.list}>
               <a
-                href="http://www.govio.be/doc/Technische%20fiche.pdf"
+                href="http://www.govio.be/doc/technische-fiche.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -105,7 +105,7 @@ const OrganiserenIndex = (props) => {
                 </div>
               </a>
               <a
-                href="http://www.govio.be/doc/Algemene%20voorwaarden.pdf"
+                href="http://www.govio.be/doc/algemene-voorwaarden.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -114,7 +114,7 @@ const OrganiserenIndex = (props) => {
                 </div>
               </a>
               <a
-                href="http://www.govio.be/doc/Handleiding.pdf"
+                href="http://www.govio.be/doc/handleiding.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
