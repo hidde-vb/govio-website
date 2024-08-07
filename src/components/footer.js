@@ -35,16 +35,16 @@ const Footer = () => (
               <b>Di</b> 10 - 17
             </li>
             <li>
-              <b>Wo</b> 13 - 17
+              <b>Wo</b> 12 - 17, Overkop
             </li>
             <li>
               <b>Do</b> 10 - 17
             </li>
             <li>
-              <b>Vr</b> 13 - 17, Bar 21 - ??
+              <b>Vr</b> 13 - 17, Bar Goof 20 - 03
             </li>
             <li>
-              <b>Za</b> afhankelijk van evenementen
+              <b>Za</b> 12 - 16, Afhanhelijk event
             </li>
             <li>Maandag en zondag gesloten</li>
           </ul>
