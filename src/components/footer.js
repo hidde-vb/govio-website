@@ -35,7 +35,10 @@ const Footer = () => (
               <b>Di</b> 10 - 17
             </li>
             <li>
-              <b>Wo</b> 12 - 17, Overkop
+              <b>Wo</b> 13 - 17
+            </li>
+            <li>
+              Overkop: 12 - 17
             </li>
             <li>
               <b>Do</b> 10 - 17
