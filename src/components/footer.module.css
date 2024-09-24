@@ -15,7 +15,6 @@
 }
 
 .columnsContainer {
-  
   display: flex;
   font-size: var(--text-lg);
   flex-direction: column;
@@ -24,7 +23,8 @@
 }
 
 .column {
-  padding-right: 4rem;
+  min-width: 160px;
+  margin-right: 3rem;
 }
 
 .rowContainer {
@@ -41,7 +41,7 @@
 }
 
 h3 {
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: var(--bold);
 }
 
@@ -82,7 +82,7 @@ h3 {
   bottom: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1048px) {
   .wave {
     display: block;
     width: 24rem;
