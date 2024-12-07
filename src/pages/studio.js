@@ -1,11 +1,11 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
 import Container from '../components/container'
 import EventPreview from '../components/event-preview'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 import * as styles from './studio.module.css'
 
@@ -25,9 +25,8 @@ const StudioIndex = (props) => {
           ></div>
           <a
             className={styles.link}
+            href="http://www.govio.be/doc/gebruikersovereenkomst-box.pdf"
             target="_blank"
-            rel="noreferrer"
-            href="https://kalmthout.be/wp-content/uploads/2022/02/Gebruikersovereenkomst-BOX-studio.pdf"
           >
             Download de overeenkomst.
           </a>

@@ -1,14 +1,14 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-import * as styles from './footer.module.css'
-
 import facebookGlyph from '../../static/images/facebook-glyph.png'
 import instagramGlyph from '../../static/images/instagram-glyph.png'
 import kmLogo from '../../static/images/km-logo.png'
 import vlLogo from '../../static/images/vl-logo.png'
 import wavesImage from '../../static/images/waves.png'
 import MemberButton from './memberButton'
+
+import * as styles from './footer.module.css'
 
 const Footer = () => (
   <div className={styles.footer} as="footer">
@@ -31,7 +31,7 @@ const Footer = () => (
               <b>Vr</b> 13 - 17
             </li>
             <li>
-              <b>Za</b> 12 - 16
+              <b>Za</b> 12 - 17
             </li>
             <li>Zondag en maandag gesloten</li>
           </ul>
