@@ -5,14 +5,13 @@
   "author": "Hidde van Bavel <hiddevanbavel@hotmail.com>",
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
-    "gatsby": "^5.5.0",
+    "gatsby": "^5.14.0",
     "gatsby-plugin-image": "^3.5.0",
     "gatsby-plugin-react-helmet": "^6.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
     "gatsby-source-contentful": "^8.5.0",
     "gatsby-transformer-remark": "^6.7.0",
     "gatsby-transformer-sharp": "^5.5.0",
-    "gh-pages": "^3.1.0",
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -22,7 +21,7 @@
     "contentful-import": "^8.3.2",
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-provision-contentful": "^0.0.5",
-    "netlify-cli": "^10.0.0"
+    "netlify-cli": "^18.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -38,7 +37,6 @@
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby develop",
     "serve-prod": "gatsby serve",
-    "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./contentful/export.json' --space-id=$CONTENTFUL_SPACE_ID --management-token=$CONTENTFUL_MANAGEMENT_TOKEN"
   }
